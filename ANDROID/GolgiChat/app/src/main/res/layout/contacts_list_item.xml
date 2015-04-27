@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#DBE2ED">
+
+<ImageView
+    android:id="@+id/avatar"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_alignParentLeft="true"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginRight="5dp"
+    android:src="@drawable/ic_launcher" />
+
+<TextView
+    android:id="@+id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="15dp"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/avatar"
+    android:layout_marginLeft="2dp"
+    android:layout_marginTop="15dp"
+    android:ellipsize="end"
+    android:textAppearance="?android:attr/textAppearanceListItem"/>
+    <!--android:textSize="17sp"-->
+<TextView
+    android:id="@+id/text2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/text1"
+    android:layout_toRightOf="@+id/avatar"
+    android:layout_marginLeft="2dp"
+    android:layout_marginTop="4dp"
+    android:textSize="10dp"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+
+</RelativeLayout>
