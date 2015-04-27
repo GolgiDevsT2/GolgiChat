@@ -1,7 +1,6 @@
 # GolgiChat
 GolgiChat is an example of a messaging application with server side co ordination for registration and Contact/Group member co ordination.
 
-It is a simple solution that can turn on and off an LED on an Arduino board (connected to GPIO pin 8). This functionality (turning on and off the LED) can be controlled in one of three ways:
 * Server side element with two Java Endpoints GCCSERVER/GCREGISTRATIONSERVER
 * An Android Application implmenting the GolgiChat Client
 
