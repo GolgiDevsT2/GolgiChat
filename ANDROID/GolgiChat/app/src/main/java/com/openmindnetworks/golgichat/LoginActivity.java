@@ -35,6 +35,7 @@ import android.widget.TextView;
 //import android.widget.EditText;
 //import android.widget.TextView;
 
+
 import com.openmindnetworks.golgi.api.GolgiAPI;
 import com.openmindnetworks.golgi.api.GolgiException;
 import com.openmindnetworks.golgi.api.GolgiTransportOptions;
@@ -45,6 +46,8 @@ import com.openmindnetworks.golgichat.gen.RegInfo;
 import com.openmindnetworks.golgichat.gen.golgiChatService;
 import com.openmindnetworks.golgichat.gen.ServerAddress;
 import com.openmindnetworks.golgichat.utils.DBG;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,10 +71,14 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     private static Button mEnterCodeButton;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        DBG.write("LoginActivity.onCreate()");
+
         setContentView(R.layout.activity_login);
 
         GolgiAPI.usePersistentConnection();
@@ -114,7 +121,31 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         mInfoText = (TextView)findViewById(R.id.info_text_field);
 
 
-        DBG.write("LoginActivity.onCreate()");
+
+
+
+
+
+//        // Request a string response from the provided URL.
+//        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+//                new Response.Listener<String>()
+//                {
+//                    @Override
+//                    public void onResponse(String response)
+//                    {
+//                        // Display the first 500 characters of the response string.
+//                        DBG.write("Response is: " + response.substring(0, 500));
+//                    }
+//                }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error)
+//            {
+//                DBG.write("That didn't work!");
+//            }
+//        });
+
+
+
     }
 
     private final static int EVENT1 = 1;

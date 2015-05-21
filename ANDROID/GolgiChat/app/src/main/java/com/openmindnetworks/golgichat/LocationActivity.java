@@ -83,10 +83,18 @@ public class LocationActivity extends Activity implements OnMapReadyCallback
         {
             String lat = data.getString( data.getColumnIndex(DataProvider.COL_LATITUDE));
             String lon = data.getString(data.getColumnIndex(DataProvider.COL_LONGITUDE));
+
+            DBG.write("LocationActivity Iterating through cursor of returned selected messages = LAT = >" + lat + "< LON = >" + lon + "<");
+
+            if (lat.equals("") || lon.equals(""))
+            {
+                lat = "0";
+                lon = "0";
+            }
             latDoubble = Double.valueOf(lat);
             lonDoubble = Double.valueOf(lon);
 
-            //DBG.write("LocationActivity Iterating through cursor of returned selected messages = LAT = >" + lat + "< LON = >" + lon + "<");
+
             data.moveToNext();
         }
         // Need to close Cursor

@@ -15,6 +15,12 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
 
+//import com.android.volley.Request;
+//import com.android.volley.RequestQueue;
+//import com.android.volley.Response;
+//import com.android.volley.VolleyError;
+//import com.android.volley.toolbox.JsonObjectRequest;
+//import com.android.volley.toolbox.Volley;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
@@ -26,6 +32,8 @@ import com.openmindnetworks.golgichat.utils.DBG;
 
 import android.support.v13.app.FragmentPagerAdapter;
 
+
+import org.json.JSONObject;
 
 import java.util.Locale;
 
@@ -711,7 +719,6 @@ actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
                             getActionBar().setHomeButtonEnabled(false);
                             getActionBar().setDisplayHomeAsUpEnabled(false);
                         }
-
                     }
                 }
 
@@ -820,6 +827,46 @@ actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
             DBG.write("The nickName is = " + Common.nickName);
             DBG.write("------------------------------------------------------------------------------------------------");
         }
+
+
+//        // =============================== VOLLEY TRIAL ============================================
+//
+//        // Instantiate the RequestQueue.
+//        RequestQueue queue = Volley.newRequestQueue(this);
+//        String url ="http://ec2-54-217-107-17.eu-west-1.compute.amazonaws.com:8888/servertouse";
+//
+//
+//        JSONObject jsonBody = null;
+//        try
+//        {
+//            jsonBody = new JSONObject("{\"email\":\"derekdoherty\"}");
+//        }catch (Exception e)
+//        {
+//
+//        }
+//
+//        DBG.write("VOLLEY Sending");
+//        JsonObjectRequest jsObjRequest = new JsonObjectRequest
+//                (Request.Method.POST, url, jsonBody, new Response.Listener<JSONObject>()
+//                {
+//
+//                    @Override
+//                    public void onResponse(JSONObject response)
+//                    {
+//                        DBG.write("VOLLEY Response: " + response.toString());
+//                    }
+//                }, new Response.ErrorListener() {
+//
+//                    @Override
+//                    public void onErrorResponse(VolleyError error)
+//                    {
+//                        // TODO Auto-generated method stub
+//                        DBG.write("VOLLEY That didn't work!");
+//                    }
+//                });
+//        // Add the request to the RequestQueue.
+//        queue.add(jsObjRequest);
+//        // =============================== VOLLEY TRIAL ============================================
     }
 
 

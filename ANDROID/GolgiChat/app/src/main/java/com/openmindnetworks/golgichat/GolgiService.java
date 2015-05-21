@@ -48,8 +48,8 @@ public class GolgiService extends GolgiAbstractService
 
     // Local Broadcast Manager
     private static LocalBroadcastManager sBroadcaster = null;
-    private golgiChatService.typingStatus.RequestReceiver typingReceiver = new golgiChatService.typingStatus.RequestReceiver(){
-
+    private golgiChatService.typingStatus.RequestReceiver typingReceiver = new golgiChatService.typingStatus.RequestReceiver()
+    {
         @Override
         public void receiveFrom(golgiChatService.typingStatus.ResultSender resultSender, String regName, String textToDisplay)
         {
@@ -256,6 +256,8 @@ public class GolgiService extends GolgiAbstractService
                             if (ts.equals(""))
                             {
                                 ts = DataProvider.getDateTime(DataProvider.dateType.MILLISECONDS);
+                                li.setLon("0");
+                                li.setLat("0");
                             }
                             values.put(DataProvider.COL_SEND_TIMESTAMP, Long.valueOf(ts));
                             values.put(DataProvider.COL_LATITUDE, li.getLat());
